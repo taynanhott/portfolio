@@ -16,8 +16,8 @@ export default function TabsItem() {
             <TabsContent value="cadastrar">
                 <Tabs defaultValue="item" className="max-w-3xl mx-auto justify-center">
                     <TabsList className="grid w-full grid-cols-2">
-                        <TabsTrigger value="group">Categoria</TabsTrigger>
                         <TabsTrigger value="item">Item</TabsTrigger>
+                        <TabsTrigger value="group">Categoria</TabsTrigger>
                     </TabsList>
                     <TabsContent value="item">
                         <Card>
@@ -80,9 +80,9 @@ export default function TabsItem() {
             <TabsContent value="gerenciar">
                 <Tabs defaultValue="modalidade" className="max-w-3xl mx-auto justify-center">
                     <TabsList className="grid w-full grid-cols-3">
+                        <TabsTrigger value="modalidade">Gasto por Modalidade</TabsTrigger>
                         <TabsTrigger value="valor">Valor Mensal</TabsTrigger>
                         <TabsTrigger value="reserva">Reserva de Segurança</TabsTrigger>
-                        <TabsTrigger value="modalidade">Gasto por Modalidade</TabsTrigger>
                     </TabsList>
                     <TabsContent value="valor">
                         <Card>
