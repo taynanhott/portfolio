@@ -14,8 +14,8 @@ interface Props {
 }
 
 export const metadata: Metadata = {
-  title: "Portfólio Taynan Z.Hott",
-  description: "Portfólio de apresentação profissional",
+  title: "Testes",
+  description: "Testes",
 };
 
 export default function RootLayout({ children }: Props) {

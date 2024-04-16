@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/carousel";
 
 export function CarouselPlugin() {
-  
+
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true })
   )
@@ -52,7 +52,7 @@ export function CarouselPlugin() {
         {components.map((component) => (
           <CarouselItem key={component.index} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
-              <Card>
+              <Card className="min-h-64">
                 <CardContent className="flex aspect-square items-center justify-center p-6 ">
                   <span className="text-center font-semibold">
                     <Link
@@ -60,6 +60,7 @@ export function CarouselPlugin() {
                       target="_self"
                     >
                       <Image
+                        className="min-h-32 min-w-32"
                         src={component.image}
                         width={600}
                         height={600}
