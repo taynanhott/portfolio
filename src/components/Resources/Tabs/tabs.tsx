@@ -5,8 +5,9 @@ import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import SimpleSelect from "../Select/select"
 import { DatePicker } from "../DatePicker/datepicker"
+import { DataTable } from "../DataTable/datatable"
 
-const classCard = 'min-h-[30rem]';
+const classCard = 'min-h-[638.5px]';
 
 export default function TabsItem() {
     return (
@@ -97,8 +98,12 @@ export default function TabsItem() {
                             </CardHeader>
                             <CardContent className="space-y-2">
                                 <div className="space-y-1">
-                                    <Label htmlFor="current">Nome Categoria</Label>
-                                    <Input id="current" type="group" defaultValue="Categoria genérica" />
+                                    <Label htmlFor="current">Valor à receber</Label>
+                                    <Input id="current" type="group" defaultValue="R$ 0,00" />
+                                </div>
+                                <div className="space-y-1">
+                                    <Label className="block" htmlFor="current">Data da Movimentação</Label>
+                                    <DatePicker />
                                 </div>
                             </CardContent>
                             <CardFooter>
@@ -116,8 +121,13 @@ export default function TabsItem() {
                             </CardHeader>
                             <CardContent className="space-y-2">
                                 <div className="space-y-1">
-                                    <Label htmlFor="current">Nome Categoria</Label>
-                                    <Input id="current" type="group" defaultValue="Categoria genérica" />
+                                    <Label htmlFor="current">Valor investido</Label>
+                                    <Input id="current" type="group" defaultValue="R$ 0,00" />
+                                </div>
+
+                                <div className="space-y-1">
+                                    <Label className="block" htmlFor="current">Data da Movimentação</Label>
+                                    <DatePicker />
                                 </div>
                             </CardContent>
                             <CardFooter>
@@ -135,8 +145,12 @@ export default function TabsItem() {
                             </CardHeader>
                             <CardContent className="space-y-2">
                                 <div className="space-y-1">
-                                    <Label htmlFor="current">Nome Categoria</Label>
-                                    <Input id="current" type="group" defaultValue="Categoria genérica" />
+                                    <Label htmlFor="current">Valor reservado</Label>
+                                    <Input id="current" type="group" defaultValue="R$ 0,00" />
+                                </div>
+                                <div className="space-y-1">
+                                    <Label className="block" htmlFor="current">Data da Movimentação</Label>
+                                    <DatePicker />
                                 </div>
                             </CardContent>
                             <CardFooter>
@@ -162,65 +176,54 @@ export function TabsGerenciar() {
                 <Tabs defaultValue="mensal" className="justify-center">
                     <TabsList className="grid w-full grid-cols-4">
                         <TabsTrigger value="mensal">Valores do Mês</TabsTrigger>
-                        <TabsTrigger value="faturamento">Faturamento do Mês</TabsTrigger>
                         <TabsTrigger value="receber">Valores à Receber</TabsTrigger>
+                        <TabsTrigger value="faturamento">Faturamento do Mês</TabsTrigger>
                         <TabsTrigger value="reserva">Reserva de Segurança</TabsTrigger>
                     </TabsList>
                     <TabsContent value="mensal">
                         <Card className={classCard}>
                             <CardHeader>
-                                <CardTitle>Gasto por Modalidade</CardTitle>
+                                <CardTitle>Valores do Mês</CardTitle>
                                 <CardDescription>
-                                    Cadastre novas categorias de item.
+                                    Visualize todos os valores previstos para serem recebidos no mês.
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-2">
-                                <div className="space-y-1">
-                                    <Label htmlFor="current">Nome Categoria</Label>
-                                    <Input id="current" type="group" defaultValue="Categoria genérica" />
-                                </div>
+                                <DataTable />
                             </CardContent>
-                            <CardFooter>
-                                <Button>Cadastrar</Button>
-                            </CardFooter>
-                        </Card>
-                    </TabsContent>
-                    <TabsContent value="faturamento">
-                        <Card className={classCard}>
-                            <CardHeader>
-                                <CardTitle>Valor Mensal</CardTitle>
-                                <CardDescription>
-                                    Cadastre novas categorias de item.
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-2">
-                                <div className="space-y-1">
-                                    <Label htmlFor="current">Nome Categoria</Label>
-                                    <Input id="current" type="group" defaultValue="Categoria genérica" />
-                                </div>
-                            </CardContent>
-                            <CardFooter>
-                                <Button>Cadastrar</Button>
-                            </CardFooter>
                         </Card>
                     </TabsContent>
                     <TabsContent value="receber">
                         <Card className={classCard}>
                             <CardHeader>
-                                <CardTitle>Reserva de Segurança</CardTitle>
+                                <CardTitle>Valores à Receber</CardTitle>
                                 <CardDescription>
-                                    Cadastre novas categorias de item.
+                                    Visualize os valores pendentes de recebimento.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-2">
+                                <DataTable />
+                            </CardContent>
+                        </Card>
+                    </TabsContent>
+                    <TabsContent value="faturamento">
+                        <Card className={classCard}>
+                            <CardHeader>
+                                <CardTitle>Faturamento do Mês</CardTitle>
+                                <CardDescription>
+                                    Visualize os dados de faturamento para o mês.
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-2">
                                 <div className="space-y-1">
-                                    <Label htmlFor="current">Nome Categoria</Label>
-                                    <Input id="current" type="group" defaultValue="Categoria genérica" />
+                                    <Label htmlFor="current">Total à Pagar</Label>
+                                    <Input id="current" type="group" defaultValue="R$ 0,00" />
+                                </div>
+                                <div className="space-y-1">
+                                    <Label htmlFor="current">Total à Receber</Label>
+                                    <Input id="current" type="group" defaultValue="R$ 0,00" />
                                 </div>
                             </CardContent>
-                            <CardFooter>
-                                <Button>Cadastrar</Button>
-                            </CardFooter>
                         </Card>
                     </TabsContent>
                     <TabsContent value="reserva">
@@ -228,18 +231,27 @@ export function TabsGerenciar() {
                             <CardHeader>
                                 <CardTitle>Reserva de Segurança</CardTitle>
                                 <CardDescription>
-                                    Cadastre novas categorias de item.
+                                    Gerencie sua reserva de emergência.
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-2">
                                 <div className="space-y-1">
-                                    <Label htmlFor="current">Nome Categoria</Label>
-                                    <Input id="current" type="group" defaultValue="Categoria genérica" />
+                                    <Label htmlFor="current">Porcentagem de Reserva</Label>
+                                    <Input id="current" type="group" defaultValue="0,00%" />
+                                </div>
+                                <div className="space-y-1">
+                                    <Label htmlFor="current">Total após 5º dia util</Label>
+                                    <Input id="current" type="group" defaultValue="R$ 0,00" />
+                                </div>
+                                <div className="space-y-1">
+                                    <Label htmlFor="current">Valor de Reserva</Label>
+                                    <Input id="current" type="group" defaultValue="R$ 0,00" />
+                                </div>
+                                <div className="space-y-1">
+                                    <Label htmlFor="current">Valor Restante sem Reserva</Label>
+                                    <Input id="current" type="group" defaultValue="R$ 0,00" />
                                 </div>
                             </CardContent>
-                            <CardFooter>
-                                <Button>Cadastrar</Button>
-                            </CardFooter>
                         </Card>
                     </TabsContent>
                 </Tabs>
