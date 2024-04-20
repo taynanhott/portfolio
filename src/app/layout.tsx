@@ -6,6 +6,7 @@ import { Head } from "@/components/Html/Header/head";
 import { Footer } from "@/components/Html/Footer/footer";
 import dynamic from 'next/dynamic';
 import { ReactNode } from "react";
+import ParticlesComponent from "@/components/Resources/Particles/particles";
 
 const DynamicMouseCircle = dynamic(() => import('@/components/Resources/MouseCircle/mouse'), { ssr: false });
 
@@ -14,8 +15,8 @@ interface Props {
 }
 
 export const metadata: Metadata = {
-  title: "Testes",
-  description: "Testes",
+  title: "Portfólio Taynan Z.Hott",
+  description: "Portfólio Taynan Z.Hott",
 };
 
 export default function RootLayout({ children }: Props) {
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: Props) {
             enableSystem
             disableTransitionOnChange
           >
+            <ParticlesComponent id="particles" className="z-0 opacity-5" />
             <Head />
             {children}
             <Footer />
