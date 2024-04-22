@@ -23,21 +23,21 @@ export function CarouselPlugin() {
   const components: { index: number; title: string; image: string; href: string }[] = [
     {
       index: 0,
-      title: "Reconhecimento Facial",
-      image: "/image/reconhecimento.jpg",
-      href: "/reconhecimento",
-    },
-    {
-      index: 1,
       title: "Calendário Eletrônico",
       image: "/image/calendario.jpg",
       href: "/calendario",
+    }, 
+    {
+      index: 1,
+      title: "Gerenciador Financeiro",
+      image: "/image/todolist.jpg",
+      href: "/todolist",
     },
     {
       index: 2,
-      title: "Projeto de Todo List",
-      image: "/image/todolist.jpg",
-      href: "/todolist",
+      title: "Reconhecimento Facial",
+      image: "/image/reconhecimento.jpg",
+      href: "/reconhecimento",
     },
   ]
 

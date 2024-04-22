@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -18,6 +18,14 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        'bungee': ['bungee', 'sans-serif'],
+        'poppins': ['poppins', 'sans-serif'],
+        'poppins-bold': ['poppins-bold', 'sans-serif'],
+        'righteous': ['righteous', 'sans-serif'],
+        'silkscreen': ['silkscreen', 'sans-serif'],
+        'silkscreen-bold': ['silkscreen-bold', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
