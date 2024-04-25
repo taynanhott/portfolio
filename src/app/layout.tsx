@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider"
 
-import { Head } from "@/components/Html/Header/head";
-import { Footer } from "@/components/Html/Footer/footer";
+import { ThemeProvider } from "../components/theme-provider";
+
+import { Head } from "../components/Html/Header/head";
+import { Footer } from "../components/Html/Footer/footer";
 import dynamic from 'next/dynamic';
 import { ReactNode } from "react";
-import ParticlesComponent from "@/components/Resources/Particles/particles";
+import ParticlesComponent from "../components/Resources/Particles/particles";
 
-const DynamicMouseCircle = dynamic(() => import('@/components/Resources/MouseCircle/mouse'), { ssr: false });
+const DynamicMouseCircle = dynamic(() => import('../components/Resources/MouseCircle/mouse'), { ssr: false });
 
 interface Props {
   children: ReactNode
