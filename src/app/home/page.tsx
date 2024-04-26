@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="z-10 relative ml-5 mr-5">
       <div className="text-center max-w-3xl mx-auto border-b border-gray-500 pb-2 border-current">
-        <div className="text-6xl whitespace-nowrap font-poppins mb-2 pointer-events-none">Taynan Z. Hott</div>
+        <div className="text-4xl lg:text-6xl whitespace-nowrap font-poppins mb-2 pointer-events-none">Taynan Z. Hott</div>
         <div className="font-poppins text-gray-500 font-bold pointer-events-none">
           Full Stack Developer</div>
       </div>
