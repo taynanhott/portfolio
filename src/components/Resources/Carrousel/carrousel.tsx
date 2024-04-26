@@ -25,19 +25,19 @@ export function CarouselPlugin() {
       index: 0,
       title: "Calendário Eletrônico",
       image: "/image/calendario.jpg",
-      href: "/calendario",
+      href: "https://github.com/taynanhott/calendar",
     }, 
     {
       index: 1,
       title: "Gerenciador Financeiro",
       image: "/image/todolist.jpg",
-      href: "/todolist",
+      href: "https://github.com/taynanhott/financial-manager",
     },
     {
       index: 2,
       title: "Reconhecimento Facial",
       image: "/image/reconhecimento.jpg",
-      href: "/reconhecimento",
+      href: "https://github.com/taynanhott/facial-recognition",
     },
   ]
 
