@@ -10,7 +10,7 @@ export default function Home() {
         <div className="font-poppins text-gray-500 font-bold pointer-events-none">
           Full Stack Developer</div>
       </div>
-      <div className="text-center font-bold pt-2 text-[12px] font-poppins pointer-events-none">JavaScript︱PHP︱TypeScript︱React︱Tailwind︱Prisma︱Next︱MySQL</div>
+      <div className="text-center font-bold pt-2 text-[12px] font-poppins pointer-events-none">JavaScript︱PHP︱TypeScript︱React︱Tailwind︱Prisma︱Next</div>
       <div className="max-w-3xl mx-auto mt-16 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
         <div className="flex justify-center">
           <div className="mr-5">
@@ -27,7 +27,7 @@ export default function Home() {
           <div className="font-poppins text-gray-500 mb-5 pointer-events-none">
             Sou Analista de Desenvolvimento II, busco sempre aprimorar minhas habilidades e conhecimento em novas tecnologias. Sou comunicativo, dedicado e experiente em gestão e comunicação em grupo.
           </div>
-          <div className="flex">
+          <div className="flex justify-center lg:justify-normal">
             <a
               className="mr-2"
               href="https://www.linkedin.com/in/taynan-hott/"
