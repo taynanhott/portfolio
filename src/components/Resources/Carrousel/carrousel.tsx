@@ -37,7 +37,7 @@ export function CarouselPlugin() {
       index: 2,
       title: "Reconhecimento Facial",
       image: "/image/reconhecimento.jpg",
-      href: "https://github.com/taynanhott/facial-recognition",
+      href: "https://portfolio-taynanzh-facial-recognition.vercel.app",
     },
   ]
 
