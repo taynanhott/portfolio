@@ -21,11 +21,12 @@ export function CarouselPlugin() {
   )
 
   const components: { index: number; title: string; image: string; href: string }[] = [
+    
     {
       index: 0,
-      title: "Calendário Eletrônico",
-      image: "/image/calendario.jpg",
-      href: "https://github.com/taynanhott/calendar",
+      title: "Reconhecimento Facial",
+      image: "/image/reconhecimento.jpg",
+      href: "https://portfolio-taynanzh-facial-recognition.vercel.app",
     }, 
     {
       index: 1,
@@ -35,10 +36,10 @@ export function CarouselPlugin() {
     },
     {
       index: 2,
-      title: "Reconhecimento Facial",
-      image: "/image/reconhecimento.jpg",
-      href: "https://portfolio-taynanzh-facial-recognition.vercel.app",
-    },
+      title: "Calendário Eletrônico",
+      image: "/image/calendario.jpg",
+      href: "https://github.com/taynanhott/calendar",
+    }
   ]
 
   return (
