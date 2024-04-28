@@ -32,7 +32,7 @@ export function CarouselPlugin() {
       index: 1,
       title: "Gerenciador Financeiro",
       image: "/image/todolist.jpg",
-      href: "https://github.com/taynanhott/financial-manager",
+      href: "https://portfolio-taynanzh-financial-manager.vercel.app",
     },
     {
       index: 2,
