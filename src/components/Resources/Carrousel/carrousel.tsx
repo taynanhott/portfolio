@@ -38,7 +38,7 @@ export function CarouselPlugin() {
       index: 2,
       title: "Calendário Eletrônico",
       image: "/image/calendario.jpg",
-      href: "https://github.com/taynanhott/calendar",
+      href: "https://portfolio-taynanzh-calendar.vercel.app",
     }
   ]
 
