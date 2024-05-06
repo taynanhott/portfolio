@@ -26,19 +26,19 @@ export function CarouselPlugin() {
       index: 0,
       title: "Reconhecimento Facial",
       image: "/image/reconhecimento.jpg",
-      href: "https://portfolio-taynanzh-facial-recognition.vercel.app",
+      href: "https://facial.taynan.dev",
     }, 
     {
       index: 1,
       title: "Gerenciador Financeiro",
       image: "/image/todolist.jpg",
-      href: "https://portfolio-taynanzh-financial-manager.vercel.app",
+      href: "https://financial.taynan.dev",
     },
     {
       index: 2,
       title: "Calendário Eletrônico",
       image: "/image/calendario.jpg",
-      href: "https://portfolio-taynanzh-calendar.vercel.app",
+      href: "https://calendar.taynan.dev",
     }
   ]
 
