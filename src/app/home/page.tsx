@@ -10,7 +10,7 @@ export default function Home() {
         <div className="font-poppins text-gray-500 font-bold pointer-events-none">
           Full Stack Developer</div>
       </div>
-      <div className="text-center font-bold pt-2 text-[12px] font-poppins pointer-events-none">JavaScript︱PHP︱TypeScript︱React︱Tailwind︱Prisma︱Next</div>
+      <div className="text-center font-bold pt-2 text-[12px] font-poppins pointer-events-none">JavaScript ● PHP ● TypeScript ● React ● Tailwind ● Prisma ● Next</div>
       <div className="max-w-3xl mx-auto mt-16 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
         <div className="flex justify-center">
           <div className="mr-5">
