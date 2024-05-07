@@ -68,7 +68,7 @@ interface Props {
 const components = [
     {
         index: 0,
-        name: 'Likedin',
+        name: 'Linkedin',
         href: 'https://www.linkedin.com/in/taynan-hott/',
         icon: '/image/logo/linkedin.png'
     },
@@ -86,7 +86,7 @@ const components = [
     },
     {
         index: 3,
-        name: 'Github',
+        name: 'GitHub',
         href: 'https://github.com/taynanhott',
         icon: '/image/logo/github.png'
     },
