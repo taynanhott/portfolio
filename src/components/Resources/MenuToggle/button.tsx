@@ -36,9 +36,9 @@ const sidebar = {
         animate={isOpen ? "open" : "closed"}
         custom={height}
         ref={containerRef}
-        className="absolute top-0 left-0 h-full bottom-0 w-80 z-30"
+        className="absolute top-0 left-0 h-3/4 bottom-0 w-80 z-30"
       >
-        <motion.div className="absolute top-0 left-0 bottom-0 w-72 bg-white" variants={sidebar} />
+        <motion.div className="absolute top-0 left-0 bottom-0 w-72 bg-gradient-to-b from-white from-90%" variants={sidebar} />
         <Navigation />
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
