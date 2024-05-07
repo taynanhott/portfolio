@@ -27,7 +27,7 @@ export default function RootLayout({ children }: Props) {
       <html lang="en" suppressHydrationWarning>
         <head>
         </head>
-        <body>
+        <body className="relative">
           <DynamicMouseCircle />
           <ThemeProvider
             attribute="class"
