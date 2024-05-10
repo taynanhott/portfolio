@@ -6,7 +6,7 @@ const Lista = ({ tecnologias }: { tecnologias: string[] }) => {
     let contador = 0.5;
   
     const listaJSX = tecnologias.map((elemento, indice) => {
-      contador += 2;
+      contador += 0.75;
       const duration = contador;
       const isLast = indice === tecnologias.length - 1;
   
@@ -15,7 +15,7 @@ const Lista = ({ tecnologias }: { tecnologias: string[] }) => {
           className="inline-block pl-1"
           key={elemento}
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 5, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration }}
         >
