@@ -12,7 +12,7 @@ const Lista = ({ tecnologias }: { tecnologias: string[] }) => {
   
       return (
         <motion.div
-          className="inline-block pl-1"
+          className="inline-block pl-1 pointer-events-none"
           key={elemento}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -31,7 +31,6 @@ const Lista = ({ tecnologias }: { tecnologias: string[] }) => {
 const tecnologias: string[] = ["JavaScript", "PHP", "TypeScript", "React", "Tailwind", "Prisma", "Next"];
 
 export const Title = () => {
-
     return (
         <>
             <motion.div
@@ -48,7 +47,6 @@ export const Title = () => {
             </motion.div>
 
             <Lista tecnologias={tecnologias} />
-
         </>
     );
 };
