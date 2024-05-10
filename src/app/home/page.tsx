@@ -1,16 +1,12 @@
 
+import { Title } from '@/components/Html/Body/Title/title';
 import { CarouselPlugin } from '@/components/Resources/Carrousel/carrousel';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <div className="z-10 relative ml-5 mr-5">
-      <div className="text-center max-w-3xl mx-auto border-b border-gray-500 pb-2 border-current">
-        <div className="text-4xl lg:text-6xl whitespace-nowrap font-poppins mb-2 pointer-events-none">Taynan Z. Hott</div>
-        <div className="font-poppins text-gray-500 font-bold pointer-events-none">
-          Full Stack Developer</div>
-      </div>
-      <div className="text-center font-bold pt-2 text-[12px] font-poppins pointer-events-none">JavaScript ● PHP ● TypeScript ● React ● Tailwind ● Prisma ● Next</div>
+      <Title />
       <div className="max-w-3xl mx-auto border backdrop-blur-sm rounded-xl shadow-lg mt-16 grid grid-cols-1 lg:grid-cols-2 p-6 items-center">
         <div className="flex justify-center">
           <div className="mr-5">
