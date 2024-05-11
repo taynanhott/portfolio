@@ -50,7 +50,7 @@ export default function Example() {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
-      className={isOpen ? "fixed top-0 left-0 h-full bottom-0 w-80 z-30" : "absolute top-0 left-0 h-full bottom-0 w-80 z-30"}
+      className={isOpen ? "fixed top-0 left-0 h-screen bottom-0 w-80 z-30" : "absolute top-0 left-0 h-screen bottom-0 w-80 z-30"}
     >
       <Menu toggle={isOpen} />
       <MenuToggle toggle={() => toggleOpen()} />
