@@ -32,7 +32,7 @@ function Icon({ tecnologias }: IconProps) {
         return (
             <a
                 key={indice}
-                className="mr-2"
+                className="mr-2 z-40"
                 href={tecnologia.href}
                 target="_blank"
             >
@@ -72,7 +72,7 @@ export default function Presentation() {
                     <div className="font-poppins text-gray-500 mb-5 pointer-events-none text-sm md:text-base lg:text-base">
                         Sou Analista de Desenvolvimento II, busco sempre aprimorar minhas habilidades e conhecimento em novas tecnologias. Sou comunicativo, dedicado e experiente em gestão e comunicação em grupo.
                     </div>
-                    <div className="flex justify-center lg:justify-normal">
+                    <div className="flex justify-center lg:justify-normal z-40">
                         <Icon tecnologias={tecnologias} />
                     </div>
                 </div>
