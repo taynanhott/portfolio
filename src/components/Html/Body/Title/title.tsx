@@ -3,16 +3,18 @@
 import { motion } from "framer-motion";
 
 const Lista = ({ tecnologias }: { tecnologias: string[] }) => {
+
     let contador = 0.5;
   
     const listaJSX = tecnologias.map((elemento, indice) => {
+
       contador += 0.75;
       const duration = contador;
       const isLast = indice === tecnologias.length - 1;
   
       return (
         <motion.div
-          className="inline-block pl-1 pointer-events-none"
+          className="inline-block pl-1 pointer-events-none text-[10px] md:text-base lg:text-base"
           key={elemento}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -20,7 +22,7 @@ const Lista = ({ tecnologias }: { tecnologias: string[] }) => {
           transition={{ duration }}
         >
           {elemento}
-          {!isLast && " ● "}
+          {!isLast && " - "}
         </motion.div>
       );
     });
@@ -41,7 +43,7 @@ export const Title = () => {
             >
                 <div className="text-center max-w-3xl mx-auto border-b border-gray-500 pb-2 border-current">
                     <div className="text-4xl lg:text-6xl whitespace-nowrap font-poppins mb-2 pointer-events-none">Taynan Z. Hott</div>
-                    <div className="font-poppins text-gray-500 font-bold pointer-events-none">
+                    <div className="font-poppins text-gray-500 font-bold pointer-events-none text-sm md:text-base lg:text-base">
                         Full Stack Developer</div>
                 </div>
             </motion.div>
