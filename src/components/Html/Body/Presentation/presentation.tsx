@@ -31,6 +31,7 @@ function Icon({ tecnologias }: IconProps) {
     const listIcon = tecnologias.map((tecnologia, indice) => {
         return (
             <a
+                key={indice}
                 className="mr-2"
                 href={tecnologia.href}
                 target="_blank"
@@ -44,8 +45,8 @@ function Icon({ tecnologias }: IconProps) {
             </a>
         );
     });
-    return listIcon
-};
+    return listIcon;
+}
 
 export default function Presentation() {
     return (
