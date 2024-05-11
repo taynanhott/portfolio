@@ -56,13 +56,13 @@ export default function Presentation() {
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 2 }}
         >
-            <div className="max-w-3xl mx-auto border backdrop-blur-sm rounded-xl shadow-lg mt-8 lg:mt-12 grid grid-cols-1 lg:grid-cols-2 p-6 items-center">
+            <div className="max-w-3xl mx-auto backdrop-blur-smrounded-xl border shadow-lg mt-8 lg:mt-12 grid grid-cols-1 lg:grid-cols-2 p-6 items-center">
                 <div className="flex justify-center">
-                    <div className="mr-5 w-40 md:w-48 lg:w-80">
+                    <div className="mr-5 w-40 md:w-48 lg:w-96">
                         <Image
-                            src="/image/fotoiabw.png"
-                            width={300}
-                            height={300}
+                            src="/image/fotoperfil.png"
+                            width={500}
+                            height={500}
                             alt=""
                         />
                     </div>
