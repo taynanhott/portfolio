@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 interface Tecnologia {
     src: string,
@@ -47,33 +47,17 @@ function Icon({ tecnologias }: IconProps) {
     return listIcon
 };
 
-import { motion } from "framer-motion";
-
 export default function Presentation() {
-    const photoRef = useRef(null);
-
-    useEffect(() => {
-        if (photoRef.current) {
-            const offsetTop = photoRef.current.offsetTop;
-
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    }, []);
-
     return (
-
         <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 2 }}
         >
-            <div className="max-w-3xl mx-auto border backdrop-blur-sm rounded-xl shadow-lg mt-16 grid grid-cols-1 lg:grid-cols-2 p-6 items-center">
+            <div className="max-w-3xl mx-auto border backdrop-blur-sm rounded-xl shadow-lg mt-8 lg:mt-12 grid grid-cols-1 lg:grid-cols-2 p-6 items-center">
                 <div className="flex justify-center">
-                    <div className="mr-5">
+                    <div className="mr-5 w-28 md:w-48 lg:w-80">
                         <Image
                             src="/image/fotoiabw.png"
                             width={300}
@@ -82,8 +66,8 @@ export default function Presentation() {
                         />
                     </div>
                 </div>
-                <div className="text-center lg:text-left" ref={photoRef}>
-                    <div className="text-5xl mb-5 font-poppins-bold pointer-events-none">Deixe eu me apresentar:</div>
+                <div className="text-center lg:text-left">
+                    <div className="text-2xl md:text-3xl lg:text-5xl mb-5 font-poppins-bold pointer-events-none">Deixe eu me apresentar:</div>
                     <div className="font-poppins text-gray-500 mb-5 pointer-events-none">
                         Sou Analista de Desenvolvimento II, busco sempre aprimorar minhas habilidades e conhecimento em novas tecnologias. Sou comunicativo, dedicado e experiente em gestão e comunicação em grupo.
                     </div>
