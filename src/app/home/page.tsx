@@ -12,14 +12,18 @@ export default function Home() {
       <Title />
       <Presentation />
       <div className="items-center">
-        <div className="block mt-60 text-xl font-poppins text-center pointer-events-none">
-          <p>Projetos Pessoais</p>
+        <div className="block mt-24 text-xl font-poppins text-center pointer-events-none">
+          <h1>Projetos Pessoais</h1>
         </div>
-        <div className="flex mt-5 ml-20 mr-20 mb-60 justify-center">
+        <div className="flex mt-5 ml-20 mr-20 justify-center">
           <CarouselPlugin />
         </div>
       </div>
-      <Experience />
+      <section className="container max-w-3xl flex gap-10 md:gap-4 lg:gap-16 flex-col md:flex-row">
+        <div className="flex flex-col gap-4">
+          <Experience />
+        </div>
+      </section>
     </div >
   );
 }
