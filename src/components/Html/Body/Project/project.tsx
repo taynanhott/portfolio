@@ -64,7 +64,7 @@ function CardProject({ components }) {
                             <p className=" mb-3 text-center font-semibold">Técnologias<div className="w-full border-b border-current opacity-15 p-2"></div></p>
                             <div className="flex gap-x-2 gap-y-2 flex-wrap mb-2">
                                 {component.tech.map((attribute: string, index: number) => (
-                                    <span className="backdrop-blur-xl text-white bg-gray-600 border rounded-lg font-bold shadow-md p-4 text-sm py-1 px-3">{attribute}</span>
+                                    <span key={`attribute-`+index} className="backdrop-blur-xl text-white bg-gray-600 border rounded-lg font-bold shadow-md p-4 text-sm py-1 px-3">{attribute}</span>
                                 ))}
                             </div>
                         </div>
