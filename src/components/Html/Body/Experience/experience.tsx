@@ -25,7 +25,7 @@ const cards: Props[] = [
                 equipe de suporte e desenvolvimento primário nas task’s repassadas pelos coordenadores de projetos`,
         datain: "novembro/2023",
         dataout: "maio/2024",
-        tech: [`PHP`, `JavaScript`, `HTML`, `CSS`, `MySQL`, `GIT`, `Bootstrap`, `Node.js`, `AWS`, `API Rest`],
+        tech: [`PHP`, `JavaScript`, `HTML`, `CSS`, `MySQL`, `GitHub`, `Bootstrap`, `Node.js`, `AWS`, `API Rest`],
     },
     {
         icon: "/image/sitcon.jpg",
@@ -59,7 +59,7 @@ function Card({ cards }) {
                     className="mb-12 backdrop-blur-sm rounded-xl border shadow-lg p-4"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 50 }}
+                    exit={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
                     <div className="lg:grid grid-cols-[40px,1fr] gap-4 md:gap-10">
@@ -96,7 +96,7 @@ function Card({ cards }) {
                                         key={`tech-${index}`}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         initial={{ opacity: 0, scale: 0 }}
-                                        exit={{ opacity: 0, scale: 0 }}
+                                        exit={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.5, delay: index * 0.1 }}
                                     >
                                         <span className="backdrop-blur-xl border rounded-lg font-bold shadow-md p-4 text-sm py-1 px-3">{attribute}</span>
