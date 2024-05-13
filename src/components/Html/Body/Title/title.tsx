@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 const Lista = ({ tecnologias }: { tecnologias: string[] }) => {
 
-    let contador = 2;
+    let contador = 1;
   
     const listaJSX = tecnologias.map((elemento, indice) => {
 
-      contador += 2;
+      contador += 1;
       const duration = contador;
       const isLast = indice === tecnologias.length - 1;
   

@@ -51,10 +51,10 @@ function Icon({ tecnologias }: IconProps) {
 export default function Presentation() {
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 2 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
         >
             <div className="max-w-3xl mx-auto backdrop-blur-sm rounded-xl border shadow-lg mt-8 lg:mt-12 grid grid-cols-1 lg:grid-cols-2 p-6 items-center">
                 <div className="flex justify-center">

@@ -19,11 +19,11 @@ export default function Home() {
           <CarouselPlugin />
         </div>
       </div>
-      <section className="container max-w-3xl flex gap-10 md:gap-4 lg:gap-16 flex-col md:flex-row">
-        <div className="flex flex-col gap-4">
+      <section className="max-w-3xl mx-auto flex gap-10 md:gap-4 lg:gap-16 flex-col md:flex-row">
+        <div className="flex flex-col">
           <Experience />
         </div>
       </section>
-    </div >
+    </div>
   );
 }

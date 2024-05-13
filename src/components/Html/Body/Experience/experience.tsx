@@ -52,16 +52,15 @@ const cards: Props[] = [
 ];
 
 function Card({ cards }) {
-    const listCard = cards.map((card: Props, indice: number) => {
-
+    const listCard = cards.map((card: Props) => {
         return (
-            <div key={indice}>
+            <div key={card.title}>
                 <motion.div
                     className="mb-12 backdrop-blur-sm rounded-xl border shadow-lg p-4"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 2 }}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 50 }}
+                    transition={{ duration: 0.5 }}
                 >
                     <div className="lg:grid grid-cols-[40px,1fr] gap-4 md:gap-10">
                         <div className="flex flex-col items-center gap-4">
@@ -86,14 +85,22 @@ function Card({ cards }) {
                                     target="_blank"
                                     rel="noreferrer"
                                     className="text-gray-500 hover:text-inherit transition-colors">@{card.title}</a>
-                                <h4 className="">{card.office}</h4>
-                                <span className="text-gray-500">{card.datain} até {card.dataout == undefined ? `atualmente` : card.dataout}</span>
-                                <p className="text-gray-500 text-justify break-all">{card.text}</p>
+                                <h4 className="font-bold">{card.office}</h4>
+                                <span className="text-gray-500 font-semibold">{card.datain} até {card.dataout == undefined ? `atualmente` : card.dataout}</span>
+                                <p className="text-gray-500 text-justify hyphens-auto">{card.text}</p>
                             </div>
                             <p className=" mb-3 mt-6 font-semibold">Competências<div className="w-full border-b border-current opacity-15 p-2"></div></p>
                             <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8">
                                 {card.tech.map((attribute: string, index: number) => (
-                                    <span key={index} className="border-gray-500 border bg-inherit text-sm py-1 px-3 rounded-lg">{attribute}</span>
+                                    <motion.span
+                                        key={`tech-${index}`}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        initial={{ opacity: 0, scale: 0 }}
+                                        exit={{ opacity: 0, scale: 0 }}
+                                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    >
+                                        <span className="backdrop-blur-xl rounded-lg font-bold shadow-md p-4 text-sm py-1 px-3">{attribute}</span>
+                                    </motion.span>
                                 ))}
                             </div>
                         </div>
@@ -112,7 +119,7 @@ export default function Experience() {
                 <h1>Experiências Profissionais</h1>
             </div>
 
-            <ul className="max-w-3xl mt-5 text-center mx-auto items-center">
+            <ul className="mt-5 text-center mx-auto items-center">
                 <Card cards={cards} />
             </ul >
         </>
