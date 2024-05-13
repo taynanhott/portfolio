@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const components: { index: number; title: string; image: string; href: string; progress: number; text: string; tech: string[]; }[] = [
 
@@ -34,14 +35,15 @@ const components: { index: number; title: string; image: string; href: string; p
 function CardProject({ components }) {
     const listCard = components.map((component: any) => {
         return (
-            <div key={component.index} className={component.index != 0 ? `mt-10 p-4 border rounded-xl` : `p-4 border rounded-xl`}>
+            <div key={component.index} className="m-2 p-4 border rounded-xl lg:hover:scale-105 backdrop-blur-sm shadow-lg lg:hover:bg-white">
 
                 <a href={component.href}
                     target="_blank"
                     rel="noreferrer"
+                    className=""
                 >
                     <div className="lg:grid grid-cols-6 gap-4 md:gap-10">
-                        <div className="flex flex-col items-center col-span-2">
+                        <div className="flex flex-col items-center col-span-6">
                             <div className="">
                                 <Image
                                     width="150"
@@ -53,18 +55,26 @@ function CardProject({ components }) {
                                 />
                             </div>
                         </div>
-                        <div className="col-span-4 pt-4 lg:pt-0">
+                        <div className="col-span-6 pt-4 lg:pt-0 text-center">
                             <h1 className="font-bold">{component.title}</h1>
-                            <div className="flex flex-col gap-2 text-sm sm:text-base text-left">
+                            <div className="flex flex-col gap-2 text-sm sm:text-base">
                                 <h4 className="font-bold text-gray-500">Progresso de conclusão: {component.progress} %</h4>
                                 <p className="text-gray-500 text-justify hyphens-auto">{component.text}</p>
                             </div>
                         </div>
-                        <div className="col-span-6 pt-4 lg:pt-0">
-                            <p className=" mb-3 text-center font-semibold">Técnologias<div className="w-full border-b border-current opacity-15 p-2"></div></p>
+                        <div className="col-span-6 text-gray-500 pt-4 lg:pt-0">
+                            <p className="mb-3 text-center font-semibold">Técnologias<div className="w-full border-b border-current opacity-15 p-2"></div></p>
                             <div className="flex gap-x-2 gap-y-2 flex-wrap mb-2">
                                 {component.tech.map((attribute: string, index: number) => (
+                                <motion.span
+                                    key={`tech-${index}`}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    exit={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                >
                                     <span key={`attribute-` + index} className="text-white bg-gray-600 border rounded-lg font-bold shadow-md p-4 text-sm py-1 px-3">{attribute}</span>
+                                </motion.span>
                                 ))}
                             </div>
                         </div>
@@ -78,11 +88,11 @@ function CardProject({ components }) {
 
 export default function Project() {
     return (
-        <div className="max-w-3xl mx-auto ">
-            <div className="flex justify-center text-xl font-poppins text-center pointer-events-none border-b border-gray-500 border-current">
+        <div className="max-w-3xl mx-auto">
+            <div className="flex justify-center text-xl font-poppins text-center pointer-events-none border-b border-gray-500 border-current mb-8">
                 <h1>Projetos Pessoais</h1>
             </div>
-            <div className="flex mt-8 flex-col items-center max-h-[36rem] overflow-y-auto  backdrop-blur-sm rounded-xl border shadow-lg p-6 " style={{ overflowY: 'auto', scrollbarWidth: 'thin' }}>
+            <div className="lg:grid grid-cols-2">
                 <CardProject components={components} />
             </div>
         </div>
