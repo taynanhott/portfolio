@@ -45,7 +45,7 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
     });
 
     return (
-        <div className="parallax font-plaster font-semibold not-italic text-center text-6xl lg:text-9xl mx-auto text-nowrap overflow-hidden opacity-[3%] antialiased">
+        <div className="parallax font-plaster font-semibold not-italic text-center text-5xl lg:text-9xl mx-auto text-nowrap overflow-hidden opacity-[3%] antialiased">
             <motion.div className="scroller" style={{ x }}>
                 <span>{children} </span>
                 <span>{children} </span>
