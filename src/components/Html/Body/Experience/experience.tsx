@@ -99,7 +99,7 @@ function Card({ cards }) {
                                         exit={{ opacity: 0, scale: 0 }}
                                         transition={{ duration: 0.5, delay: index * 0.1 }}
                                     >
-                                        <span className="backdrop-blur-xl rounded-lg font-bold shadow-md p-4 text-sm py-1 px-3">{attribute}</span>
+                                        <span className="backdrop-blur-xl border rounded-lg font-bold shadow-md p-4 text-sm py-1 px-3">{attribute}</span>
                                     </motion.span>
                                 ))}
                             </div>
