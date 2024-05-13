@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--background);
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -137,4 +156,11 @@ input {
   src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('opentype');
   font-style: 'normal';
   font-display: 'swap';
+}
+
+@font-face {
+  font-family: 'plaster';
+  src: url('../fonts/Plaster/Plaster-Regular.ttf') format('opentype');
+  font-style: 'normal';
+  -webkit-font-smoothing: antialiased;
 }

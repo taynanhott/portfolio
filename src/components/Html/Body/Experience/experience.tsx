@@ -115,7 +115,7 @@ function Card({ cards }) {
 export default function Experience() {
     return (
         <>
-            <div className="block mt-24 text-xl font-poppins text-center pointer-events-none">
+            <div className="block text-xl font-poppins text-center pointer-events-none border-b border-gray-500 pb-2 border-current">
                 <h1>Experiências Profissionais</h1>
             </div>
 

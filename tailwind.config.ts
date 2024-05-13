@@ -21,6 +21,7 @@ const config = {
       fontFamily: {
         'poppins': ['poppins', 'sans-serif'],
         'poppins-bold': ['poppins-bold', 'sans-serif'],
+        'plaster': ['plaster', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
