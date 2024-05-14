@@ -35,7 +35,7 @@ const components: { index: number; title: string; image: string; href: string; p
 function CardProject({ components }) {
     const listCard = components.map((component: any) => {
         return (
-            <div key={component.index} className="p-6 border hover:z-40 rounded-xl lg:hover:scale-105 backdrop-blur-sm lg:hover:backdrop-blur-md shadow-lg lg:hover:backdrop-brightness-125 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-700">
+            <div key={component.index} className="p-6 mb-12 md:mb-0 lg:mb-0 border hover:z-40 rounded-xl lg:hover:scale-105 backdrop-blur-sm lg:hover:backdrop-blur-md shadow-lg lg:hover:backdrop-brightness-125 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-700">
 
                 <a href={component.href}
                     target="_blank"
@@ -90,10 +90,10 @@ function CardProject({ components }) {
 export default function Project() {
     return (
         <div className="max-w-3xl mx-auto">
-            <div className="flex justify-center text-xl font-poppins text-center pointer-events-none border-b border-gray-500 border-current mb-8">
+            <div className="flex justify-center text-xl font-poppins text-center pointer-events-none border-b border-gray-500 border-current mb-4">
                 <h1>Projetos Pessoais</h1>
             </div>
-            <div className="lg:grid grid-cols-2 gap-4">
+            <div className="lg:grid gap-4 grid-cols-2">
                 <CardProject components={components} />
             </div>
         </div>
