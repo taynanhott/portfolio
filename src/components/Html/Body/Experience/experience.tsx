@@ -61,6 +61,7 @@ function Card({ cards }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
                 >
                     <div className="lg:grid grid-cols-[40px,1fr] gap-4 md:gap-10">
                         <div className="flex flex-col items-center gap-4">
@@ -85,12 +86,12 @@ function Card({ cards }) {
                                     target="_blank"
                                     rel="noreferrer"
                                     className="text-gray-500 hover:text-inherit transition-colors">@{card.title}</a>
-                                <h4 className="font-bold">{card.office}</h4>
-                                <span className="text-gray-500 font-semibold">{card.datain} até {card.dataout == undefined ? `atualmente` : card.dataout}</span>
-                                <p className="text-gray-500 text-justify hyphens-auto">{card.text}</p>
+                                <h4 className="font-bold pointer-events-none">{card.office}</h4>
+                                <span className="text-gray-500 font-semibold pointer-events-none">{card.datain} até {card.dataout == undefined ? `atualmente` : card.dataout}</span>
+                                <p className="text-gray-500 text-justify hyphens-auto pointer-events-none">{card.text}</p>
                             </div>
-                            <p className=" mb-3 mt-6 font-semibold">Competências<div className="w-full border-b border-current opacity-15 p-2"></div></p>
-                            <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8">
+                            <p className=" mb-3 mt-6 font-semibold pointer-events-none">Competências<div className="w-full border-b border-current opacity-15 p-2"></div></p>
+                            <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8 pointer-events-none">
                                 {card.tech.map((attribute: string, index: number) => (
                                     <motion.span
                                         key={`tech-${index}`}
@@ -98,6 +99,7 @@ function Card({ cards }) {
                                         initial={{ opacity: 0, scale: 0 }}
                                         exit={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.5, delay: index * 0.1 }}
+                                        viewport={{ once: true }}
                                     >
                                         <span className="border rounded-lg font-bold shadow-md p-4 text-sm py-1 px-3">{attribute}</span>
                                     </motion.span>

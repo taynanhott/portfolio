@@ -35,14 +35,14 @@ const components: { index: number; title: string; image: string; href: string; p
 function CardProject({ components }) {
     const listCard = components.map((component: any) => {
         return (
-            <div key={component.index} className="m-2 p-4 border rounded-xl lg:hover:scale-105 backdrop-blur-sm shadow-lg lg:hover:bg-white">
+            <div key={component.index} className="p-6 border hover:z-40 rounded-xl lg:hover:scale-105 backdrop-blur-sm lg:hover:backdrop-blur-md shadow-lg lg:hover:backdrop-brightness-125 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-700">
 
                 <a href={component.href}
                     target="_blank"
                     rel="noreferrer"
                     className=""
                 >
-                    <div className="lg:grid grid-cols-6 gap-4 md:gap-10">
+                    <div className="lg:grid grid-cols-6">
                         <div className="flex flex-col items-center col-span-6">
                             <div className="">
                                 <Image
@@ -55,28 +55,29 @@ function CardProject({ components }) {
                                 />
                             </div>
                         </div>
-                        <div className="col-span-6 pt-4 lg:pt-0 text-center">
-                            <h1 className="font-bold">{component.title}</h1>
-                            <div className="flex flex-col gap-2 text-sm sm:text-base">
-                                <h4 className="font-bold text-gray-500">Progresso de conclusão: {component.progress} %</h4>
+                        <div className="col-span-6 text-center">
+                            <h1 className="font-bold text-lg pb-2 mt-4 text-gray-400">{component.title}<div className="w-full border-b border-gray-400 opacity-15 p-1"></div></h1>
+                            <div className="flex flex-col text-sm sm:text-base p-2 mb-2">
                                 <p className="text-gray-500 text-justify hyphens-auto">{component.text}</p>
                             </div>
                         </div>
                         <div className="col-span-6 text-gray-500 pt-4 lg:pt-0">
-                            <p className="mb-3 text-center font-semibold">Técnologias<div className="w-full border-b border-current opacity-15 p-2"></div></p>
-                            <div className="flex gap-x-2 gap-y-2 flex-wrap mb-2">
+                            <p className="mb-3 text-center font-semibold text-gray-400">Tecnologias<div className="w-full border-b border-current opacity-15 p-1"></div></p>
+                            <div className="flex gap-x-2 gap-y-2 py-4 flex-wrap mb-2">
                                 {component.tech.map((attribute: string, index: number) => (
-                                <motion.span
-                                    key={`tech-${index}`}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    initial={{ opacity: 0, scale: 0 }}
-                                    exit={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                >
-                                    <span key={`attribute-` + index} className="text-white bg-gray-600 border rounded-lg font-bold shadow-md p-4 text-sm py-1 px-3">{attribute}</span>
-                                </motion.span>
+                                    <motion.span
+                                        key={`tech-${index}`}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        initial={{ opacity: 0, scale: 0 }}
+                                        exit={{ opacity: 1, scale: 1 }}
+                                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <span key={`attribute-` + index} className="text-white bg-gray-600 border rounded-lg font-bold shadow-md p-4 text-sm py-1 px-3">{attribute}</span>
+                                    </motion.span>
                                 ))}
                             </div>
+                            <h4 className="font-bold text-gray-500">Progresso de conclusão: <p className="inline-block text-gray-400">{component.progress}</p> %</h4>
                         </div>
                     </div>
                 </a>
@@ -92,7 +93,7 @@ export default function Project() {
             <div className="flex justify-center text-xl font-poppins text-center pointer-events-none border-b border-gray-500 border-current mb-8">
                 <h1>Projetos Pessoais</h1>
             </div>
-            <div className="lg:grid grid-cols-2">
+            <div className="lg:grid grid-cols-2 gap-4">
                 <CardProject components={components} />
             </div>
         </div>
