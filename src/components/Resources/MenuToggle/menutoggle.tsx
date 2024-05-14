@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import Image from 'next/image';
+import Link from "next/link";
 
 const Path = props => (
     <motion.path
@@ -12,7 +13,7 @@ const Path = props => (
     />
 );
 
-export const MenuToggle = ({ toggle }) => (
+export const ListToggle = ({ toggle }) => (
     <button onClick={toggle} className="absolute outline-none border-none cursor-pointer top-[17px] left-[29px] w-[50px] h-[50px] rounded-[50%] bg-white pl-[0.90rem] pt-[0.325rem]">
         <svg width="23" height="23" viewBox="0 0 23 23">
             <Path
@@ -64,6 +65,14 @@ interface Props {
         icon?: string
     }
 }
+
+const pages = [
+    {
+        index: 0,
+        name: 'Dashboard',
+        href: 'https://taynan.dev/home'
+    },
+];
 
 const components = [
     {
@@ -150,20 +159,30 @@ const variantes = {
 
 export const Navigation = () => (
     <>
-        <motion.ul className="top-24 w-56 p-6 mb-5 absolute" variants={variantes}>
+        <motion.ul className="top-12 w-56 p-6 mb-2 absolute" variants={variantes}>
             <motion.li
                 variants={variants}
-                className="flex items-center text-lg font-bold mb-6 text-gray-900"
+                className="flex items-center text-lg font-bold mb-4 text-gray-900"
+            >Pages</motion.li>
+            {pages.map(page => (
+                <MenuItem components={page} key={page.index} />
+            ))}
+        </motion.ul>
+
+        <motion.ul className="top-36 w-56 p-6 mb-2 absolute" variants={variantes}>
+            <motion.li
+                variants={variants}
+                className="flex items-center text-lg font-bold mb-4 text-gray-900"
             >Contatos</motion.li>
             {components.map(component => (
                 <MenuItem components={component} key={component.index} />
             ))}
         </motion.ul>
 
-        <motion.ul className="top-96 w-56 p-6 mb-5 absolute" variants={variantes}>
+        <motion.ul className="top-[25rem] w-56 p-6 mb-2 absolute" variants={variantes}>
             <motion.li
                 variants={variants}
-                className="flex items-center text-lg font-bold mb-6 text-gray-900"
+                className="flex items-center text-lg font-bold mb-4 text-gray-900"
             >Projetos</motion.li>
             {project.map(project => (
                 <MenuItem components={project} key={project.index} />

@@ -3,7 +3,7 @@
 import { useDimensions } from "@/components/use-dimensions";
 import { motion, sync, useCycle } from "framer-motion";
 import { useRef, useState } from "react";
-import { MenuToggle, Navigation } from "./menutoggle";
+import { ListToggle, Navigation } from "./menutoggle";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -39,7 +39,7 @@ function Menu({ toggle }) {
   );
 }
 
-export default function Example() {
+export default function MenuToggle() {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -53,7 +53,7 @@ export default function Example() {
       className={isOpen ? "fixed top-0 left-0 h-screen bottom-0 w-80 z-30" : "absolute top-0 left-0 h-0 bottom-0 w-80 z-30"}
     >
       <Menu toggle={isOpen} />
-      <MenuToggle toggle={() => toggleOpen()} />
+      <ListToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );
 };
