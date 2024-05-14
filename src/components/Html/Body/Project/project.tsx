@@ -35,7 +35,7 @@ const components: { index: number; title: string; image: string; href: string; p
 function CardProject({ components }) {
     const listCard = components.map((component: any) => {
         return (
-            <div key={component.index} className="p-6 mb-12 md:mb-0 lg:mb-0 border hover:z-40 rounded-xl lg:hover:scale-105 backdrop-blur-sm lg:hover:backdrop-blur-md shadow-lg lg:hover:backdrop-brightness-125 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-700">
+            <div key={component.index} className="p-6 mb-12 md:mb-0 lg:mb-0 border hover:z-40 rounded-xl lg:hover:scale-105 backdrop-blur-sm lg:hover:backdrop-blur-md shadow-lg lg:hover:backdrop-brightness-125 transition ease-in-out hover:-translate-y-1 duration-700">
 
                 <a href={component.href}
                     target="_blank"
