@@ -4,7 +4,6 @@ import { Title } from '@/components/Html/Body/Title/title';
 import Presentation from '@/components/Html/Body/Presentation/presentation';
 import Experience from '@/components/Html/Body/Experience/experience';
 import Project from '@/components/Html/Body/Project/project';
-import ParallaxText from '@/components/Resources/LabelAnimate/animate';
 
 export default function Home() {
 
