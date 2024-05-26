@@ -64,6 +64,7 @@ interface Props {
         href: string,
         icon?: string
     }
+    key: number
 }
 
 const pages = [
@@ -159,16 +160,6 @@ const variantes = {
 
 export const Navigation = () => (
     <>
-        <motion.ul className="top-12 w-56 p-6 mb-2 absolute" variants={variantes}>
-            <motion.li
-                variants={variants}
-                className="flex items-center text-lg font-bold mb-4 text-gray-900"
-            >Pages</motion.li>
-            {pages.map(page => (
-                <MenuItem components={page} key={page.index} />
-            ))}
-        </motion.ul>
-
         <motion.ul className="top-36 w-56 p-6 mb-2 absolute" variants={variantes}>
             <motion.li
                 variants={variants}
