@@ -160,7 +160,7 @@ const variantes = {
 
 export const Navigation = () => (
     <>
-        <motion.ul className="top-36 w-56 p-6 mb-2 absolute" variants={variantes}>
+        <motion.ul className="top-16 w-56 p-6 mb-2 absolute" variants={variantes}>
             <motion.li
                 variants={variants}
                 className="flex items-center text-lg font-bold mb-4 text-gray-900"
@@ -170,7 +170,7 @@ export const Navigation = () => (
             ))}
         </motion.ul>
 
-        <motion.ul className="top-[25rem] w-56 p-6 mb-2 absolute" variants={variantes}>
+        <motion.ul className="top-80 w-56 p-6 mb-2 absolute" variants={variantes}>
             <motion.li
                 variants={variants}
                 className="flex items-center text-lg font-bold mb-4 text-gray-900"
