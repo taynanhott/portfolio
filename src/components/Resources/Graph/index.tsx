@@ -48,7 +48,6 @@ interface Props {
                 options: {
                     legend: {
                         position: string,
-                        horizontalAlign: string
                     },
                 },
             }[],
