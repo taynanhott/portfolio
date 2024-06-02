@@ -1,41 +1,39 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const components: { index: number; title: string; image: string; href: string; progress: number; text: string; tech: string[]; }[] = [
+const components: { title: string; image: string; href: string; progress: number; text: string; tech: string[]; }[] = [
 
     {
-        index: 0,
+        title: "Gerenciador Financeiro",
+        image: "/image/todolist.jpg",
+        href: "https://financial.taynan.dev",
+        progress: 75,
+        text: `Projeto visa facilitar a organização financeira do usuário, com funcionalidades de cadastro de despesas, levantamento do faturamento, planejamento de reservas financeiras entre outras funções.`,
+        tech: ['React', 'TypeScript', `Apex`, `Tailwind`, `Node`, `Next`],
+    },
+    {
         title: "Reconhecimento Facial",
         image: "/image/reconhecimento.jpg",
         href: "https://facial.taynan.dev",
         progress: 50,
         text: `Integração da API face-api.js, onde o sistema consegue identificar um rosto, sua expressão facial e realizar o comparativo de uma foto enviada com rosto detectado e informar se são compatíveis.`,
-        tech: ['TypeScript', 'React', `Tailwind`, `Next`, `Prisma`, `Node`, `API`],
+        tech: ['TypeScript', 'React', `Tailwind`, `Next`, `Node`, `API`],
     },
-    {
-        index: 1,
-        title: "Gerenciador Financeiro (Destaque!)",
-        image: "/image/todolist.jpg",
-        href: "https://financial.taynan.dev",
-        progress: 75,
-        text: `Projeto visa facilitar a organização financeira do usuário, com funcionalidades de cadastro de despesas, levantamento do faturamento, planejamento de reservas financeiras entre outras funções.`,
-        tech: ['React', 'TypeScript', `Tailwind`, `Prisma`, `Next`, `Node`],
-    },
-    {
-        index: 2,
-        title: "Calendário Eletrônico",
-        image: "/image/calendario.jpg",
-        href: "https://calendar.taynan.dev",
-        progress: 25,
-        text: 'Construção de um calendário eletrônico permitindo montar uma agenda de itens através de suas funcionalidades',
-        tech: ['TypeScript', `Tailwind`, `API`, `Next`, `Prisma`, 'React', `Node`],
-    }
+    //{
+    //    title: "Calendário Eletrônico",
+    //    image: "/image/calendario.jpg",
+    //    href: "https://calendar.taynan.dev",
+    //    progress: 25,
+    //    text: 'Construção de um calendário eletrônico permitindo montar uma agenda de itens através de suas funcionalidades',
+    //    tech: ['TypeScript', `Tailwind`, `API`, `Next`, `Prisma`, 'React', `Node`],
+    //}
 ]
 
 function CardProject({ components }) {
-    const listCard = components.map((component: any) => {
+    const listCard = components.map((component: any, index: number) => {
         return (
-            <div key={component.index} className="p-6 mb-12 md:mb-0 lg:mb-0 border hover:z-40 rounded-xl lg:hover:scale-105 backdrop-blur-sm lg:hover:backdrop-blur-md shadow-lg lg:hover:backdrop-brightness-125 transition ease-in-out hover:-translate-y-1 duration-700">
+            //<div key={component.index} className="p-6 mb-12 md:mb-0 lg:mb-0 border hover:z-40 rounded-xl lg:hover:scale-105 backdrop-blur-sm lg:hover:backdrop-blur-md shadow-lg lg:hover:backdrop-brightness-125 transition ease-in-out hover:-translate-y-1 duration-700">
+            <div key={index} className="p-6 mb-12 border hover:z-40 rounded-xl lg:hover:scale-105 backdrop-blur-sm lg:hover:backdrop-blur-md shadow-lg lg:hover:backdrop-brightness-125 transition ease-in-out hover:-translate-y-1 duration-700">
 
                 <a href={component.href}
                     target="_blank"
@@ -93,7 +91,10 @@ export default function Project() {
             <div className="flex justify-center text-xl font-poppins text-center pointer-events-none border-b border-gray-500 border-current mb-4">
                 <h1>Projetos Pessoais</h1>
             </div>
-            <div className="lg:grid gap-4 grid-cols-2">
+            {
+                //<div className="lg:grid gap-4 grid-cols-2">
+            }
+            <div className="">
                 <CardProject components={components} />
             </div>
         </div>
