@@ -31,8 +31,18 @@ export default function Perfil() {
                     `Tomada de risco: 55.07`,
                 ],
                 legend: {
-                    position: 'right' as const
+                    position: 'right' as const,
+                    horizontalAlign: 'left',
                 },
+                responsive: [{
+                    breakpoint: 640,
+                    options: {
+                        legend: {
+                            position: 'bottom',
+                            horizontalAlign: 'left',
+                        },
+                    },
+                }],
                 fill: {
                     opacity: 0.9,
                     colors: [

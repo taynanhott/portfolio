@@ -43,6 +43,15 @@ interface Props {
                     },
                 },
             },
+            responsive: {
+                breakpoint: number,
+                options: {
+                    legend: {
+                        position: string,
+                        horizontalAlign: string
+                    },
+                },
+            }[],
         },
         series: number[] | {
             name: string,
