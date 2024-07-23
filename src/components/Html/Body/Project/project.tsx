@@ -7,7 +7,7 @@ const components: { title: string; image: string; href: string; progress: number
         title: "Gerenciador Financeiro",
         image: "/image/todolist.jpg",
         href: "https://financial.taynan.dev",
-        progress: 75,
+        progress: 100,
         text: `Projeto visa facilitar a organização financeira do usuário, com funcionalidades de cadastro de despesas, levantamento do faturamento, planejamento de reservas financeiras entre outras funções.`,
         tech: ['React', 'TypeScript', `Apex`, `Tailwind`, `Node`, `Next`],
     },
