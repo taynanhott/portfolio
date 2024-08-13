@@ -12,21 +12,21 @@ const components: { title: string; image: string; href: string; progress: number
         tech: ['React', 'TypeScript', `Apex`, `Tailwind`, `Node`, `Next`],
     },
     {
+        title: "Previsão do Tempo",
+        image: "/image/clima.png",
+        href: "https://weather.taynan.dev",
+        progress: 100,
+        text: 'Construção de um sistema integrado a uma API de previsão do tempo, focado no estudo de animações de acordo com o clima do local pesquisado.',
+        tech: ['TypeScript', 'Tailwind', 'React', 'Framer-Motion', 'Vite'],
+    },
+    {
         title: "Reconhecimento Facial",
         image: "/image/reconhecimento.jpg",
         href: "https://facial.taynan.dev",
         progress: 50,
         text: `Integração da API face-api.js, onde o sistema consegue identificar um rosto, sua expressão facial e realizar o comparativo de uma foto enviada com rosto detectado e informar se são compatíveis.`,
-        tech: ['TypeScript', 'React', `Tailwind`, `Next`, `Node`, `API`],
+        tech: ['TypeScript', 'React', 'Tailwind', `Next`, `Node`, `API`],
     },
-    //{
-    //    title: "Calendário Eletrônico",
-    //    image: "/image/calendario.jpg",
-    //    href: "https://calendar.taynan.dev",
-    //    progress: 25,
-    //    text: 'Construção de um calendário eletrônico permitindo montar uma agenda de itens através de suas funcionalidades',
-    //    tech: ['TypeScript', `Tailwind`, `API`, `Next`, `Prisma`, 'React', `Node`],
-    //}
 ]
 
 function CardProject({ components }) {

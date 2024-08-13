@@ -111,16 +111,16 @@ const project = [
     },
     {
         index: 1,
+        name: 'Previsão',
+        href: 'https://weather.taynan.dev',
+        icon: '/image/clima.png'
+    },
+    {
+        index: 2,
         name: 'Gerenciador',
         href: 'https://financial.taynan.dev',
         icon: '/image/todolist.jpg'
     },
-    //{
-    //    index: 2,
-    //    name: 'Calendario',
-    //    href: 'https://calendar.taynan.dev',
-    //    icon: '/image/calendario.jpg'
-    //},
 ];
 
 export const MenuItem = ({ components }: Props) => {
