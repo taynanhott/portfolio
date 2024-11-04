@@ -10,6 +10,14 @@ const components: { title: string; image: string; href: string; progress: number
         progress: 100,
         text: `Projeto visa facilitar a organização financeira do usuário, com funcionalidades de cadastro de despesas, levantamento do faturamento, planejamento de reservas financeiras entre outras funções.`,
         tech: ['React', 'TypeScript', `Apex`, `Tailwind`, `Node`, `Next`],
+    }, 
+    {
+        title: "Projeto FullCalendar",
+        image: "/image/fullcalendar.png",
+        href: "https://calendar.taynan.dev",
+        progress: 100,
+        text: 'Este projeto tem como objetivo a organização das tarefas do dia a dia de forma intuitiva mas sem abrir mão de recursos avançados para o controle e execução dos itens.',
+        tech: ['TypeScript', 'Tailwind', 'React', 'Next', 'Node', 'FullCalendar'],
     },
     {
         title: "Previsão do Tempo",
