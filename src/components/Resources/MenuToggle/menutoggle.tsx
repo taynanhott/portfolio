@@ -104,10 +104,16 @@ const components = [
 
 const project = [
     {
-        index: 0,
-        name: 'Reconhecimento',
-        href: 'https://facial.taynan.dev',
-        icon: '/image/reconhecimento.jpg'
+        index: 2,
+        name: 'Gerenciador',
+        href: 'https://financial.taynan.dev',
+        icon: '/image/todolist.jpg'
+    },
+    {
+        index: 2,
+        name: 'FullCalendar',
+        href: 'https://calendar.taynan.dev',
+        icon: '/image/fullcalendar.png'
     },
     {
         index: 1,
@@ -116,10 +122,10 @@ const project = [
         icon: '/image/clima.png'
     },
     {
-        index: 2,
-        name: 'Gerenciador',
-        href: 'https://financial.taynan.dev',
-        icon: '/image/todolist.jpg'
+        index: 0,
+        name: 'Reconhecimento',
+        href: 'https://facial.taynan.dev',
+        icon: '/image/reconhecimento.jpg'
     },
 ];
 

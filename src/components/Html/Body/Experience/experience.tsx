@@ -4,16 +4,32 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface Props {
-    icon?: string
-    title: string
-    office: string
-    text: string
-    datain: string
-    dataout?: string
-    tech?: string[]
+    icon?: string;
+    title: string;
+    office: string;
+    text: string;
+    datain: string;
+    dataout?: string;
+    tech?: string[];
+    href: string;
 }
 
 const cards: Props[] = [
+    {
+        icon: "/image/sigesis.jpg",
+        title: "Sigesis",
+        office: `Analista de Desenvolvimento`,
+        text: ` Responsável por realizar correções e melhorias em módulos do sistema de forma Full Stack,
+         para reduzir o tempo de carregamento das telas, melhorar a usabilidade e otimizar o consumo de dados no banco de dados.
+          Também por reescrever o código utilizando metodologias modernas e boas práticas,
+           garantindo que o sistema seja escalável e preparado para futuras atualizações.
+            Além disso, responsável pelo desenvolvimento de integrações com APIs, como a API Oficial do WhatsApp e eNotas,
+             assegurando uma integração eficiente e fluida entre os serviços.`,
+        datain: "junho/2024",
+        dataout: "atualmente",
+        tech: [`PHP`, `JavaScript`, `HTML`, `CSS`, `MySQL`, `GitHub`, `Bootstrap`, `API Rest`],
+        href: "https://www.linkedin.com/company/sigesis/mycompany/"
+    },
     {
         icon: "/image/sitcon.jpg",
         title: "Sitcon Tecnologia da Informação",
@@ -26,6 +42,7 @@ const cards: Props[] = [
         datain: "novembro/2023",
         dataout: "maio/2024",
         tech: [`PHP`, `JavaScript`, `HTML`, `CSS`, `MySQL`, `GitHub`, `Bootstrap`, `Node.js`, `AWS`, `API Rest`],
+        href: "https://www.linkedin.com/company/sitconsistemas/mycompany/"
     },
     {
         icon: "/image/sitcon.jpg",
@@ -37,6 +54,7 @@ const cards: Props[] = [
         datain: "julho/2022",
         dataout: "outubro/2023",
         tech: [`PHP`, `JavaScript`, `HTML`, `CSS`, `MySQL`, `Bootstrap`, `API Rest`],
+        href: "https://www.linkedin.com/company/sitconsistemas/mycompany/"
     },
     {
         icon: "/image/sitcon.jpg",
@@ -48,6 +66,7 @@ const cards: Props[] = [
         datain: "fevereiro/2022",
         dataout: "julho/2022",
         tech: [`PHP`, `HTML`, `CSS`, `MySQL`],
+        href: "https://www.linkedin.com/company/sitconsistemas/mycompany/"
     },
 ];
 
@@ -82,7 +101,7 @@ function Card({ cards }) {
                         </div>
                         <div>
                             <div className="flex flex-col gap-2 text-sm sm:text-base text-left">
-                                <a href="https://www.linkedin.com/company/sitconsistemas/mycompany/"
+                                <a href={card.href}
                                     target="_blank"
                                     rel="noreferrer"
                                     className="text-gray-500 hover:text-inherit transition-colors">@{card.title}</a>
