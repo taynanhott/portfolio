@@ -1,7 +1,6 @@
-import * as React from "react";
 import { motion } from "framer-motion";
+import * as React from "react";
 import Image from 'next/image';
-import Link from "next/link";
 
 const Path = props => (
     <motion.path
@@ -14,8 +13,8 @@ const Path = props => (
 );
 
 export const ListToggle = ({ toggle }) => (
-    <button onClick={toggle} className="absolute outline-none border-none cursor-pointer top-[17px] left-[29px] w-[50px] h-[50px] rounded-[50%] bg-white pl-[0.90rem] pt-[0.325rem]">
-        <svg width="23" height="23" viewBox="0 0 23 23">
+    <button onClick={toggle} className="fixed outline-none border-none cursor-pointer top-4 left-4 w-12 h-12 rounded-[50%] bg-white pl-[0.90rem] pt-[0.325rem]">
+        <svg width="21" height="21" viewBox="0 0 23 23">
             <Path
                 variants={{
                     closed: { d: "M 2 2.5 L 20 2.5" },
@@ -67,14 +66,6 @@ interface Props {
     key: number
 }
 
-const pages = [
-    {
-        index: 0,
-        name: 'Dashboard',
-        href: 'https://taynan.dev/home'
-    },
-];
-
 const components = [
     {
         index: 0,
@@ -114,6 +105,12 @@ const project = [
         name: 'FullCalendar',
         href: 'https://calendar.taynan.dev',
         icon: '/image/fullcalendar.png'
+    },
+    {
+        index: 1,
+        name: 'Rick and Morty',
+        href: 'https://rickandmorty.taynan.dev',
+        icon: '/image/rickandmorty.png'
     },
     {
         index: 1,

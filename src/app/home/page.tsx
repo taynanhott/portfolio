@@ -9,7 +9,7 @@ import Perfil from '@/components/Html/Body/Perfil';
 export default function Home() {
 
   return (
-    <div className="z-10 relative ml-5 mr-5">
+    <div className="z-10 relative ml-5 mr-5 pt-28">
       <Title />
       <Presentation />
       <section>

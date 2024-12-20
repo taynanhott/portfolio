@@ -36,7 +36,7 @@ export default function RootLayout({ children }: Props) {
             disableTransitionOnChange
           >
             <MenuToggle />
-            <ParticlesComponent id="particles" className="z-0 opacity-5" />
+            <ParticlesComponent id="particles" className="z-0" />
             <Head />
             {children}
             <Footer />

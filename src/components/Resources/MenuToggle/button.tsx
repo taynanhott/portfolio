@@ -1,9 +1,9 @@
 "use client"
 
 import { useDimensions } from "@/components/use-dimensions";
-import { motion, sync, useCycle } from "framer-motion";
-import { useRef, useState } from "react";
 import { ListToggle, Navigation } from "./menutoggle";
+import { motion, useCycle } from "framer-motion";
+import { useRef } from "react";
 
 const sidebar = {
   open: (height = 1000) => ({

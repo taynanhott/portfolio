@@ -20,7 +20,7 @@ const ParticlesComponent = (props: any) => {
     direction: "none" | "top" | "bottom" | "left" | "right" | "topLeft" | "topRight" | "bottomRight" | "bottomLeft" | "outside" | "inside";
   }
   interface IOutModes {
-    default: "bounce" | "split" | "destroy" | "out"; // Allowed options
+    default: "bounce" | "split" | "destroy" | "out";
   }
   const options = useMemo(
     () => ({
@@ -59,7 +59,7 @@ const ParticlesComponent = (props: any) => {
           color: "#6b7280",
           distance: 250,
           enable: true,
-          opacity: 0.18,
+          opacity: 0.3,
           width: 1,
         },
         move: {

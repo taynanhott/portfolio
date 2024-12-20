@@ -20,6 +20,14 @@ const components: { title: string; image: string; href: string; progress: number
         tech: ['TypeScript', 'Tailwind', 'React', 'Next', 'Node', 'FullCalendar'],
     },
     {
+        title: "Rick and Morty",
+        image: "/image/rickandmorty.png",
+        href: "https://rickandmorty.taynan.dev",
+        progress: 100,
+        text: 'Criação de um sistema utilizando a API do desenho Rick and Morty, funcionando como uma wiki, trazendo alguns dados interessantes sobre a animação e seus personagens.',
+        tech: ['JavaScript', 'Tailwind', 'React', 'Framer-Motion', 'Vite'],
+    },
+    {
         title: "Previsão do Tempo",
         image: "/image/clima.png",
         href: "https://weather.taynan.dev",
@@ -40,7 +48,6 @@ const components: { title: string; image: string; href: string; progress: number
 function CardProject({ components }) {
     const listCard = components.map((component: any, index: number) => {
         return (
-            //<div key={component.index} className="p-6 mb-12 md:mb-0 lg:mb-0 border hover:z-40 rounded-xl lg:hover:scale-105 backdrop-blur-sm lg:hover:backdrop-blur-md shadow-lg lg:hover:backdrop-brightness-125 transition ease-in-out hover:-translate-y-1 duration-700">
             <div key={index} className="p-6 mb-12 border hover:z-40 rounded-xl lg:hover:scale-105 backdrop-blur-sm lg:hover:backdrop-blur-md shadow-lg lg:hover:backdrop-brightness-125 transition ease-in-out hover:-translate-y-1 duration-700">
 
                 <a href={component.href}
@@ -50,7 +57,7 @@ function CardProject({ components }) {
                 >
                     <div className="lg:grid grid-cols-6">
                         <div className="flex flex-col items-center col-span-6">
-                            <div className="">
+                            <div>
                                 <Image
                                     width="150"
                                     height="150"
@@ -99,9 +106,6 @@ export default function Project() {
             <div className="flex justify-center text-xl font-poppins text-center pointer-events-none border-b border-gray-500 border-current mb-4">
                 <h1>Projetos Pessoais</h1>
             </div>
-            {
-                //<div className="lg:grid gap-4 grid-cols-2">
-            }
             <div className="">
                 <CardProject components={components} />
             </div>
