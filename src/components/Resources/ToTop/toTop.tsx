@@ -13,7 +13,7 @@ export default function ToTop({ isVisible }: Props) {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-5 right-3 p-3 backdrop-blur-sm border border-current rounded-full shadow-lg hover:bg-slate-700 focus:outline-none transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      className={`fixed bottom-5 right-3 p-3 backdrop-blur-sm border border-current hover:text-white rounded-full shadow-lg focus:outline-none transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
     >
       ↑
