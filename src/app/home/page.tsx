@@ -30,9 +30,6 @@ export default function Home() {
         <div className="items-center mt-12 md:mt-24 lg:mt-48">
           <Project />
         </div>
-        <div className="items-center mt-12 md:mt-24 lg:mt-48 max-w-3xl mx-auto">
-          <Perfil />
-        </div>
         <div className="max-w-3xl mx-auto flex gap-10 md:gap-4 lg:gap-16 flex-col md:flex-row mt-12 md:mt-24 lg:mt-48">
           <div className="flex flex-col">
             <Experience />
