@@ -4,7 +4,6 @@ import Presentation from '@/components/Html/Body/Presentation/presentation';
 import Experience from '@/components/Html/Body/Experience/experience';
 import Project from '@/components/Html/Body/Project/project';
 import { Title } from '@/components/Html/Body/Title/title';
-import Perfil from '@/components/Html/Body/Perfil';
 import { useEffect, useState } from 'react';
 import ToTop from '@/components/Resources/ToTop/toTop';
 
