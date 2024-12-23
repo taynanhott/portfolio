@@ -24,10 +24,10 @@ export function ModeToggle() {
         size="icon"
         onClick={toggleTheme}
         aria-label={isDarkMode ? "Alternar para modo claro" : "Alternar para modo escuro"}
-        className={`w-12 h-12 cursor-pointer rounded-full ${isDarkMode ? 'hover:bg-slate-100 bg-slate-800' : 'hover:bg-slate-800 bg-slate-100'}`}
+        className={`w-12 h-12 cursor-pointer rounded-full ${isDarkMode ? 'hover:bg-slate-100 bg-slate-800 hover:text-slate-800' : 'hover:bg-slate-800 bg-slate-100 hover:text-slate-100'}`}
       >
         {isDarkMode ? (
-          <Moon className="h-[1.2rem] w-[1.2rem] text-slate-100" />
+          <Moon className="h-[1.2rem] w-[1.2rem]" />
         ) : (
           <Sun className="h-[1.2rem] w-[1.2rem]" />
         )}
